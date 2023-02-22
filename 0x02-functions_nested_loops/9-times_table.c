@@ -2,41 +2,40 @@
 
 /**
  * times_table -  a function that prints the 9 times table, starting with 0
- * rone = row, cone = column, d = digits of current result
- * Return: times table
- * add extra space past single digit
+ * Return: empty output
  */
 
 void times_table(void)
 {
-	int rone, cone, d;
-
-	for (rone = 0; rone <= 9; rone++)
+	int x, y, z, u, d;
+	
+	for (x = 0; x <= 9; x++)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (cone = 1; cone <= 9; cone++)
-		{
-			d = (rone * cone);
-			if ((d / 10) > 0)
+	for (y = 0; y <= 9; y++)
+	{
+			z = (x * y);
+			if (z > 9)
 			{
-				_putchar((d / 10) + '0');
+			u = z % 10;
+			d = (z - u) / 10;
+			_putchar(44);
+			_putchar(32);
+			_putchar(d + '0');
+			_putchar(u + '0';
 			}
 			else
 			{
-				_putchar(' ');
+			if (y != 0)
 			}
-			_putchar((d % 10) + '0');
-
-			if (cone < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
+			_putchar(44);
+			_putchar(32);
+			_putchar(32);
 			}
-		}
-		_putchar('\n');
-	}
+			}
+			_putchar(z + '0');
+			}
+			}
+			_putchar('\n');
 
 }
 
