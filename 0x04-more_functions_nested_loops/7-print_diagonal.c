@@ -10,7 +10,7 @@
 
 void print_diagonal(int n)
 {
-	int x, y;
+	int row, num_lines;
 
 	if (n <= 0)
 	{
@@ -18,14 +18,18 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (x = 0; x <= n; x++)
+		for (row = 1; row <= n; row++)
 		{
-		for (y = 0; y < x; y++)
-		{
-		_putchar(' ');
-		}
-		_putchar('\\');
-		_putchar('\n');
+			if (row > 1)
+			{
+				for (num_lines = 1; num_lines <= row - 1; num_lines++)
+				{
+				_putchar(' ');
+				}
+			}
+			_putchar('\\');
+			_putchar('\n');
 		}
 	}
 }
+
