@@ -5,8 +5,7 @@
  * a null byte, to the end of the string pointed to by @dest.
  * @dest: A pointer to the string to be linked to.
  * @src: The source string to be added to @dest.
- *
- * Return: A pointer to the destination string @dest.
+ * Return: void
  */
 
 char *_strcat(char *dest, char *src)
